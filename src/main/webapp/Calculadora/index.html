@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .cajaFuera{
+  width: 400px;
+  text-align: center;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 10px;
+  display: flex;
+  flex-direction: row;
+  margin-left: 50;
+
+    }
+</style>
+<body>
+    <p >CALCULADORA</p>
+    <div class="cajaFuera">
+    <form action="" method="post">
+		<label id="label1">Numero <input type="number" id="numeroInput"  name="usuario"></label> <br>
+        <label id="label2">Resultado <span id="resultadoOutput"></span></label> <br>	
+		<br> 
+        <div><button onclick="setOperator('+')">+</button><button onclick="setOperator('-')">-</button><button onclick="setOperator('*')">*</button><button onclick="setOperator('/')">/</button></div>
+    </div>
+    <input type="button" value="Resultado" onclick="prueba2()">
+	</form>
+</div>
+
+<script>
+    let numeroInput = document.getElementById('numeroInput');
+    let resultadoOutput = document.getElementById('resultadoOutput');
+    let operator = '';
+
+    function setOperator(op) {
+        operator = op;
+        resultadoOutput.value = operator;
+    }
+    function prueba(op) {
+        let numero = numeroInput.value;
+        switch (operator) {
+                case '+':
+                    resultadoOutput.textContent = numero + resultadoOutput.textContent;
+                    break;
+                case '-':
+                    resultadoOutput.textContent = numero - resultadoOutput.textContent;
+                    break;
+                case '*':
+                    resultadoOutput.textContent = numero * resultadoOutput.textContent;
+                    break;
+                case '/':
+                    resultadoOutput.textContent = numero / resultadoOutput.textContent;
+                    break;
+            }
+            function prueba2() {
+            let numero = numeroInput.value;
+            let resultado = eval(numero + operator + numero.resultadoOutput.textContent);
+
+            resultadoOutput.textContent = resultado;
+        }
+    }
+    
+</script>
+</body>
+</html>
