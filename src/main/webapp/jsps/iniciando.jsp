@@ -8,16 +8,16 @@
 </head>
 <body>
 <%
-List<String> prueba= new ArrayList();
-prueba.add(0, "rojo");
-prueba.add(1, "verde");
-prueba.add(2, "azul");
-for (String prueb :pruebas) {
+List<String> pruebas= new ArrayList();
+pruebas.add(0, "rojo");
+pruebas.add(1, "verde");
+pruebas.add(2, "azul");
+for (String prueba : pruebas) { }
 %>
  <ol>
- <li>prueba.</li>
- <li>prueba[1];</li>
- <li>prueba[2];</li>
+ <li><%= pruebas %></li>
+ <li><%= pruebas %></li>
+ <li><%= pruebas %></li>
  </ol>
 
 
