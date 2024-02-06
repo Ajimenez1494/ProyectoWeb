@@ -1,5 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1" import="java.util.List.pojos.Usuario%>
+    pageEncoding="ISO-8859-1" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -9,6 +9,6 @@
 <body>
 <h1>Listado Usuarios</h1>
 
-<% List<Usuario> usuarios = (List<Usuario>request.getAttribute("atributoListadoUsuario"); %>
+<!--    List<Usuario> usuarios = (List<Usuario>request.getAttribute("atributoListadoUsuario"); -->
 </body>
 </html>
