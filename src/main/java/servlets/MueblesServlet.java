@@ -1,21 +1,24 @@
 package servlets;
 
 import java.io.IOException;
-import javax.servlet.ServletException;
-import javax.servlet.http.HttpServlet;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
+
+import jakarta.servlet.Servlet;
+import jakarta.servlet.ServletConfig;
+import jakarta.servlet.ServletException;
+import jakarta.servlet.http.HttpServlet;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
 
 /**
- * Servlet implementation class muebles
+ * Servlet implementation class Muebles
  */
-public class muebles extends HttpServlet {
+public class MueblesServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public muebles() {
+    public MueblesServlet() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -40,7 +43,7 @@ public class muebles extends HttpServlet {
         request.setAttribute("nombre", nombre);
         request.setAttribute("precio", precio);
 
-		request.getRequestDispatcher("FormMuebles.jps").forward(request, response);
+		request.getRequestDispatcher("ejercicioMueble/FormMuebles.jsp").forward(request, response);
 	}
 
 }

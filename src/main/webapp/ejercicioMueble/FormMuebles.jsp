@@ -9,11 +9,11 @@
 </head>
 <body>
 <h2>Resultados del Registro</h2>
-    
+<% 
     String nombre = request.getParameter("nombre");
-    String apellido = request.getParameter("apellido");
-
+    String precio = request.getParameter("precio");
+%>
     <p>Nombre: <%= nombre %></p>
-    <p>Apellido: <%= apellido %></p>
+    <p>Precio: <%= precio %></p>
 </body>
 </html>

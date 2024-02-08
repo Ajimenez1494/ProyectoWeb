@@ -20,7 +20,7 @@
   	<servlet-name>muebles</servlet-name>
   	<display-name>muebles</display-name>
   	<description></description>
-  	<servlet-class>servlets.muebles</servlet-class>
+  	<servlet-class>servlets.MueblesServlet</servlet-class>
   </servlet>
   <servlet-mapping>
   	<servlet-name>ServletPrueba</servlet-name>
