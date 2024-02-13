@@ -1,8 +1,16 @@
 package pojos;
 
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.Table;
+
+@Entity
+@Table(name = "TB_MUEBLE")
 public class Mueble {
 
+@Column(length = 9, name = "nombre")
 private String nombre;
+
 private int precio;
 
 
