@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Calculadora</title>
+    <!-- Enlace a Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <style>
+        body {
+            background-color: #f8f9fa;
+            margin-bottom: 70px; /* Ajuste para evitar que la calculadora tape el footer */
+        }
+
+        .footer {
+            background-color: #343a40;
+            color: #28a745;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-md-4">
+            <div class="card">
+                <div class="card-header">
+                    <h5 class="card-title">Calculadora</h5>
+                </div>
+                <div class="card-body">
+                    <input type="text" id="display" class="form-control mb-2" readonly>
+                    <div class="row">
+                        <div class="col-3">
+                            <button class="btn btn-secondary btn-block" onclick="appendToDisplay('1')">1</button>
+                        </div>
+                        <div class="col-3">
+                            <button class="btn btn-secondary btn-block" onclick="appendToDisplay('2')">2</button>
+                        </div>
+                        <div class="col-3">
+                            <button class="btn btn-secondary btn-block" onclick="appendToDisplay('3')">3</button>
+                        </div>
+                        <div class="col-3">
+                            <button class="btn btn-secondary btn-block" onclick="appendToDisplay('4')">4</button>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-3">
+                            <button class="btn btn-secondary btn-block" onclick="appendToDisplay('5')">5</button>
+                        </div>
+                        <div class="col-3">
+                            <button class="btn btn-secondary btn-block" onclick="appendToDisplay('6')">6</button>
+                        </div>
+                        <div class="col-3">
+                            <button class="btn btn-secondary btn-block" onclick="appendToDisplay('7')">7</button>
+                        </div>
+                        <div class="col-3">
+                            <button class="btn btn-secondary btn-block" onclick="appendToDisplay('8')">8</button>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-3">
+                            <button class="btn btn-secondary btn-block" onclick="appendToDisplay('9')">9</button>
+                        </div>
+                        <div class="col-3">                            
+                        <button class="btn btn-secondary btn-block" onclick="appendToDisplay('0')">0</button>
+                        </div>
+                        <div class="col-3">
+                            <button class="btn btn-secondary btn-block" onclick="appendToDisplay('-')">-</button>
+                        </div>
+                        <div class="col-3">
+                         <button class="btn btn-secondary btn-block" onclick="appendToDisplay('+')">+</button>
+
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-6">
+                            <button class="btn btn-success btn-block" onclick="calculate()">+</button>
+                        </div>
+                        <div class="col-6">
+                            <button class="btn btn-success btn-block" onclick="calculate()">-</button>
+                        </div>
+                        <div class="col-6">
+                        <button class="btn btn-success btn-block" onclick="calculate()">=</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Footer -->
+<div class="footer">
+    Pie de página
+</div>
+
+<!-- Enlace a Bootstrap JS y Popper.js -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+<!-- Script de JavaScript para la funcionalidad de la calculadora -->
+<script>
+    function appendToDisplay(value) {
+        document.getElementById('display').value += value;
+    }
+
+    function calculate() {
+        try {
+            document.getElementById('display').value = eval(document.getElementById('display').value);
+        } catch (error) {
+            document.getElementById('display').value = 'Error';
+        }
+    }
+</script>
+
+</body>
+</html>
